@@ -1,0 +1,4 @@
+14,Chandu,17000,F
+15,Navya,23000,F
+16,Pooji,32000,F
+17,Dinesh,22000,M
