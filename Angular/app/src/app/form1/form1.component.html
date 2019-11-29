@@ -1,0 +1,30 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="data(form1)">
+
+    <div class="form group">
+      <input type="text" name="Company" id="Company" class="form-control" placeholder="Company Name" #company="ngModel" ngModel>
+    </div>
+
+    <div class="form group">
+      <select name="select" id="select" class="form-control">
+        <option value="0" select disabled>Skills</option>
+       <option value="Java">Java</option>
+       <option value="J2ee">J2ee</option>
+       <option value="Python">Python</option>
+      </select>
+    </div>
+    <div class="form group">
+        <input type="number" name="exp" id="exp" class="form-control" placeholder="Years of experience" #exp="ngModel" ngModel>
+      </div>
+      <div class="form group">
+        <input type="number" name="CCTC" id="CCTC" class="form-control" placeholder="CCTC" #ctc="ngModel" ngModel>
+      </div>
+      <div class="form group">
+        <input type="text" name="Location" id="Location" class="form-control" placeholder="Location" #location="ngModel" ngModel>
+      </div>
+  
+  
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-success float-right"[disabled]="form.invalid">Add Requirement</button>
+    </div>
+</form>
+

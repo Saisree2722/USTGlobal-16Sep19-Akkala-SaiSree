@@ -1,0 +1,35 @@
+
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="data2(form3)">
+
+    <div class="form group">
+      <input type="text" name="name" id="name" class="form-control" placeholder="User Name" #name="ngModel" ngModel>
+    </div>
+    <div class="form group">
+        <input type="number" name="age" id="age" class="form-control" placeholder="Age" #age="ngModel" ngModel>
+      </div>
+      <div >
+          <label for="gender">Gender</label><br>
+          <input type="radio"name="gender" id=male>Male
+          <input type="radio"name="gender" id=female>Female
+          <input type="radio"name="gender" id=others>Othes
+      </div>   
+      <div class="form group">
+        <input type="email" name="mail" id="mail" class="form-control" placeholder="User Email" #email="ngModel" ngModel>
+      </div>
+      <div class="form group">
+        <input type="number" name="num" id="num" class="form-control" placeholder="User Number" #num="ngModel" ngModel>
+      </div>
+      <div class="form group">
+        <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Password" #password="ngModel" ngModel>
+      </div>
+      <div class="form group">
+        <input type="password" name="pwd" id="pwd" class="form-control" placeholder="retype-password" #password="ngModel" ngModel>
+      </div>
+  
+  
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-success float-right">Add User</button>
+    </div>
+</form>
+
+

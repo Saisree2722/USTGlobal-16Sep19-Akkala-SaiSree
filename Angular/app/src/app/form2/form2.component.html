@@ -1,0 +1,32 @@
+
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="data1(form2)">
+
+    <div class="form group">
+      <input type="text" name="name" id="name" class="form-control" placeholder="Candidate Name" #name="ngModel" ngModel>
+    </div>
+    <div class="form group">
+        <input type="number" name="exp" id="exp" class="form-control" placeholder="Years of experience" #exp="ngModel" ngModel>
+      </div>
+      <div >
+          <label for="skills">Skills</label><br>
+        <input type="radio"name="Skills" id=java>java
+        <input type="radio"name="Skills" id=java>Angular
+        <input type="radio"name="Skills" id=java>SQl
+        <input type="radio"name="Skills" id=java>j2ee
+       </div>
+      <div class="form group">
+        <input type="number" name="CCTC" id="CCTC" class="form-control" placeholder="CCTC" #cctc="ngModel" ngModel>
+      </div>
+      <div class="form group">
+        <input type="number" name="ECTC" id="ECTC" class="form-control" placeholder="ECTC" #ectc="ngModel" ngModel>
+      </div>
+      <div class="form group">
+        <input type="text" name="Location" id="Location" class="form-control" placeholder="Ready to Relocate" #location="ngModel" ngModel>
+      </div>
+  
+  
+    <div class="form-group">
+        <button type="submit" class="btn btn-outline-success float-right">Schedule interview</button>
+    </div>
+</form>
+
