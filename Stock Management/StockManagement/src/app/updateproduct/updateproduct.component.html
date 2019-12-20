@@ -1,0 +1,43 @@
+
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="col-md-6 offset-md-3 mt-5 card">
+    <div class="card-header">
+        <h2 style="text-align: center;">Update Product</h2>
+    </div>
+    <div class="card-body">   
+        <form #updateProductForm="ngForm" (ngSubmit)="updateProduct(updateProductForm)" method="POST" role="form"> 
+            <input type="number" name="id" id="id"  placeholder="Change Productid"
+                class="form-control mb-3" #id='ngModel' ngModel>
+            <div *ngIf="id.invalid && id.touched">
+                <p *ngIf=id.errors.required class="text-danger">*This feild is mandatory</p>
+            </div>
+            <input type="text" name="name" id="name" required minlength="1" placeholder="Change Product name"
+                class="form-control mb-3" #name='ngModel' ngModel>
+            <div *ngIf="name.invalid && name.touched">
+                <p *ngIf=name.errors.required class="text-danger">*This feild is mandatory</p>
+            </div>
+            <input type="text" name="category" id="category" required minlength="1" placeholder="Change category"
+                class="form-control mb-3" #category='ngModel' ngModel>
+            <div *ngIf="category.invalid && category.touched">
+                <p *ngIf=category.errors.required class="text-danger">*This feild is mandatory</p>
+            </div>
+            <input type="text" name="company" id="company" required minlength="1" placeholder="Change Product Company"
+                class="form-control mb-3" #company='ngModel' ngModel>
+            <div *ngIf="company.invalid && company.touched">
+                <p *ngIf=company.errors.required class="text-danger">*This feild is mandatory</p>
+            </div>
+            <input type="text" name="quantity" id="quantity" required minlength="1" placeholder="Change Product Quantity"
+                class="form-control mb-3" #quantity='ngModel' ngModel>
+            <div *ngIf="quantity.invalid && quantity.touched">
+                <p *ngIf=quantity.errors.required class="text-danger">*This feild is mandatory</p>
+            </div>
+            <input type="number" name="price" id="price" required minlength="1" placeholder="Change Product Price"
+                class="form-control mb-3" #price='ngModel' ngModel>
+            <div *ngIf="price.invalid && price.touched">
+                <p *ngIf=price.errors.required class="text-danger">*This feild is mandatory</p>
+            </div>
+            <button class="btn btn-outline-dark" type="submit" [disabled]="updateProductForm.invalid">Update</button>
+        </form>
+        <h3>{{result}}</h3>
+    </div>
+</div>

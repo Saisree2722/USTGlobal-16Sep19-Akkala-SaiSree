@@ -1,0 +1,33 @@
+<br>
+<h2 style ="text-align:center;">Search By Category</h2>
+ <div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="col-md-6 offset-md-3 mt-5">
+        <form >
+    <input type="text" name="category" id="category" placeholder="Enter Product Category" class="form-control mb-3" #category='ngModel' ngModel>
+     <button class="btn btn-outline-dark" type="submit">search</button>
+    </form>
+</div>
+ 
+        <table class="table table-bordered">
+    <thead class="thead-grey">
+        <tr>
+            <td>ID</td>
+            <td>name</td>
+            <td>Category</td>
+            <td>Company</td>
+            <td>Quantity</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+<tbody>
+    <tr *ngFor='let product of products'>
+       <td>{{product.id}}</td>
+       <td>{{product.name}}</td>
+       <td>{{product.category}}</td>
+       <td>{{product.company}}</td>
+       <td>{{product.quantity}}</td>
+       <td>{{product.price}}</td>
+    </tr>
+</tbody>
+</table>
+

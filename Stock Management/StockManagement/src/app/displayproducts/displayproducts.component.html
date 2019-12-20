@@ -1,0 +1,29 @@
+<div class="col-md-6 offset-3 mt-4 mb-4">
+        <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr border="2px">
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Company</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let product of products'>
+                            <td>{{product.id}}</td>
+                            <td>{{product.name}}</td>
+                            <td>{{product.category}}</td>
+                            <td>{{product.company}}</td>
+                            <td>{{product.quantity}}</td>
+                            <td>{{product.price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+                <div style="text-align: center;">
+                    <a class="nav-link" routerLink="/updateproduct">click here to display Product<span class="sr-only">(current)</span></a>
+                </div>
+        
+            
